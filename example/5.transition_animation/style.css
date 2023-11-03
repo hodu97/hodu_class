@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgray;
+}
+
+/* box1 */
+.box1 {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    background-color: #fff;
+    margin: 100px auto 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.box1 .child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0C356A;
+    color: #FFC436;
+    font-size: 22px;
+    border-radius: 10px;
+    line-height: 50px;
+
+    /*     transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0.3s; */
+
+    /* transition: transform 0.8s 0.5s ease, background-color 0.5s, color 0.3s; */
+    transition: all 0.5s
+        /* all은 transform,background-color, color를 모두 포함, all 생략가능; */
+}
+
+.box1:hover .child {
+    transform: translateY(-50px);
+    background-color: #0174BE;
+    color: #FFF0CE;
+}
+
+/* box2 */
+
+.box2 {
+    width: 400px;
+    font-size: 30px;
+    background-color: #61A3BA;
+    color: #A2C579;
+    text-align: center;
+    margin: 0 auto 50px;
+}
+
+.box2 p {
+    transform: translateX(-100%);
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.09, 0.18, 0.68, 1.56);
+}
+
+.box2:hover p {
+    transform: translateX(0);
+}
+
+.box2 .one {
+    transition-delay: 0.3s;
+}
+
+.box2 .two {
+    transition-delay: 0.6s;
+}
+
+.box2 .three {
+    transition-delay: 0.9s;
+}
+
+/* box3 */
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: #A7D397;
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+
+
+
+
+
+
+
+
+    /* 🍁🍀🍁🍀🍁🍀🍀🍁🍂🍀🍁 */
+    animation-name: box_ani;
+    /* keyframes의 이름을 연결해야된다 */
+    /* 애니메이션의 지속시간 second의 약자(초) */
+    animation-duration: 2s;
+    /* 애니메이션의 반복횟수 // 무한반복시 infinite */
+    animation-iteration-count: 1;
+    /* 애니메이션의 방향 */
+    /* normal 기본값 */
+    /* alternate 정방향 -> 역방향 -> 정방향  
+    alternate-reverse 역-> 정 -> 역 
+    reverse 위치의 시작이 끝지점*/
+    animation-direction: normal;
+    /* 애니메이션 지연시간 */
+    animation-delay: 1s;
+    /* 애니메이션 가속도 */
+    animation-timing-function: ease;
+    /* 🍟애니메이션 시작전과 끝난 후 처리 방법🍟 중요 하요 */
+    /* forwards 애니메이션이 끝난상태에서 멈춤 */
+    /* backwards 애니메이션의 시작이 keyframes의 0%상태에서 시작 */
+    /* both ==> forwards + backwards */
+    animation-fill-mode: both;
+    /* 🍁🍀🍁🍀🍁🍀🍀🍁🍂🍀🍁 */
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(127, 208, 255);
+    text-align: center;
+    font-size: 30px;
+    line-height: 100px;
+}
+
+@keyframes box_ani2{
+    0%{transform: translate(0,0);}
+    25%{transform: translate(200px,0);}
+    50%{transform: translate(200px,200px);}
+    75%{transform: translate(0,200px);}
+    100%{transform: translate(0,0);}
+}
+
+
+/* 애니메이션움직임 제어 */
+
+@keyframes box_ani {
+    from {
+        /* 시간의 시작지점 0% */
+        margin-left: 200px;
+    }
+
+    to {
+        /* 시간의 끝나는지점 100% */
+        margin-left: 500px;
+    }
+}
