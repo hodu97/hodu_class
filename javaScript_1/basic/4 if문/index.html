@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //[💥] if 조건문 (if문)
+        //if(조건문){괄호안에 조건문이 true이면 실행되는 실행문}
+        //false --> "", null, underfned,0,NaN
+
+        /*if (조건문) {
+        조건문이 참일때의 실행문
+        } else {
+        조건문이 거짓일때의 실행문
+        } */
+
+        //한 라인으로 사용할때 --> 괄호는 있어도 되고 , 없어도 된다
+        let bb = 200;
+        //[첫번째]
+        if (bb == 200) {
+            console.log("200점 입니다.")
+            //블럭안에 2줄이상일때는 {} 생략할 수 없다.
+        }
+
+        //[두번째]
+        if (bb == 200) console.log("200점 입니다.")
+
+        //[세번째]
+        if (bb == 400) {
+            console.log("200점 입니다.");
+            console.log("300점 입니다.");
+        }
+
+        //[예제]
+        //false --> "",null,undefined,0,NaN
+        if (0) { //실행안됨
+            console.log("나는 실행될까요?")
+        }
+
+        if (1) { //실행됨
+            console.log("나는 실행될까요?")
+        }
+        //!(Not)
+        if (!null) {
+            console.log("부정(!)이 붙어서 true가 되었어요")
+        }
+
+
+        let isTest = 10 > 90; //false
+
+        if (isTest) {
+            console.log("조건문이 참일때")
+        } else {
+            console.log("조건문이 거짓일때")
+        }
+        
+    </script>
+</body>
+
+</html>
